@@ -1,0 +1,11 @@
+<article>
+    <nav class="breadcrumb-block" role="navigation">
+        <div ui-sref="breadcrumb.child" class="subcrumb" role="link">View child</div>
+        <br/>
+        <a href="#" class="breadcrumb-icon"><span class="icon-breadcrumb-mobile"></span></a>
+        <div class="nav-wrapper breadcrumb-content">
+            <a ng-repeat="breadcrumb in breadcrumbs track by $index" ng-if="!$first" href="" class="breadcrumb" title="{{breadcrumb.url}}" ng-click="onClickingLink($event, breadcrumb)">{{breadcrumb.url | firstLetterCaps}}</a>
+        </div>
+        <div ui-view class="breadcrumb-child"></div>
+    </nav>
+</article>
